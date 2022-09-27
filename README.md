@@ -23,3 +23,18 @@ Main project Files :
                - train_classifier.py : python file contains code for importing data from disaster_messages.db and build and train the model , Then evaluate it and exporting it to a pickle file
                - classifier.pkl : pickle file that contains the trained model
 - The Notebooks folder : Folder that contains explantory notebooks to build both the ETL pipeline and the ML pipeline . Also contains copies of csv files and db file
+
+## How to run the web app 
+1. Run the following commands in the project's root directory to set up your database and model.
+
+    - To run ETL pipeline that cleans data and stores in database
+        `python data/process_data.py data/messages.csv data/categories.csv data/disaster_messages.db`
+    - To run ML pipeline that trains classifier and saves
+        `python models/train_classifier.py data/disaster_messages.db models/classifier.pkl`
+
+2. Go to `app` directory: `cd app`
+
+3. Run your web app: `python run.py`
+
+4. Then go to http://0.0.0.0:3000/
+
