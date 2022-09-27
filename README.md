@@ -1,7 +1,7 @@
 # Disaster response program
 This is a web application is made as a project part of Udacity Data Scientist Nanodegree program ,And its developed to predict to which category a message belongs in 
 time of disasters .
-![image](https://user-images.githubusercontent.com/91777656/192622916-5f7c2387-4780-4cac-a291-66a70486cbfd.png)
+
 
 
 ## About 
@@ -37,4 +37,27 @@ Main project Files :
 3. Run your web app: `python run.py`
 
 4. Then go to http://0.0.0.0:3000/
+
+## Libraries 
+- flask
+- sklearn
+- re
+- pandas
+- numpy
+- plotly
+- sqlalchemy
+- nltk
+
+To install those packges you can use pip or conda install
+example `pip install flask pandas` or `py -m pip install numpy`
+
+
+## The web app 
+the web app has two pages that is the landing page :
+
+![image](https://user-images.githubusercontent.com/91777656/192622916-5f7c2387-4780-4cac-a291-66a70486cbfd.png)
+
+And this the page wher the classification results appear :
+
+![image](https://user-images.githubusercontent.com/91777656/192625330-86292ea8-852b-4c28-9d0e-f685c479d414.png)
 
