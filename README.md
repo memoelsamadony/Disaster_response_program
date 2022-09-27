@@ -53,7 +53,7 @@ example `pip install flask pandas` or `py -m pip install numpy`
 
 
 ## The web app 
-the web app has two pages that is the landing page :
+the web app has two pages , That is the landing page :
 
 ![image](https://user-images.githubusercontent.com/91777656/192622916-5f7c2387-4780-4cac-a291-66a70486cbfd.png)
 
@@ -61,3 +61,6 @@ And this the page wher the classification results appear :
 
 ![image](https://user-images.githubusercontent.com/91777656/192625330-86292ea8-852b-4c28-9d0e-f685c479d414.png)
 
+
+## credits 
+this [article](https://www.sciencedirect.com/science/article/pii/S1877050919314152) helped me understand imbalanced data
