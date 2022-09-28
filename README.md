@@ -10,6 +10,7 @@ This web application takes a message from the user and then predict if it betwee
 Main project Files :
 
 - The app folder : 
+
                - templates folder :
                
                    - master.html : main page HTML code
@@ -19,6 +20,7 @@ Main project Files :
                - run.py : the python file at which the Backend of the program operates
                
 - The data folder :
+
                - categories.csv : the file that contains data about the categories
                
                - messages.csv : the file that contain data about the messages and thier genre
@@ -28,6 +30,7 @@ Main project Files :
                - disaster_messages.db : DB file that contains the table that was exported from process_data.py
                
 - The models folder :
+
                - train_classifier.py : python file contains code for importing data from disaster_messages.db and build and train the model , Then evaluate it and exporting it to a pickle file
                
                - classifier.pkl : pickle file that contains the trained model
