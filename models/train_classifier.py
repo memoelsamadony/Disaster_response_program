@@ -15,6 +15,7 @@ from sklearn.metrics import f1_score,accuracy_score,precision_score,recall_score
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from sklearn.multioutput import MultiOutputClassifier
 from sklearn.base import BaseEstimator, TransformerMixin
+from sklearn.model_selection import GridSearchCV
 
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk.stem.porter import PorterStemmer
@@ -67,7 +68,11 @@ def build_model():
                      ('tfidf',TfidfTransformer()),
                      ('multi output classifier',MultiOutputClassifier(RidgeClassifier()))],verbose=True)
     
-    return pipeline1
+    parameters = {'multi output classifier__estimator__alpha':[0.1,1,10]}
+    
+    cv = GridSearchCV(pipeline1,parameters,cv=3)
+    
+    return cv
 
 
 def evaluate_model(model, X_test, y_test, category_names):
