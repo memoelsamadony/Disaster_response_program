@@ -2,6 +2,12 @@
 This is a web application is made as a project part of Udacity Data Scientist Nanodegree program ,And its developed to predict to which category a message belongs in 
 time of disasters .
 
+## Table of contents
+- [About](#about)
+- [How to run the web app](#how-to-run-the-web-app)
+- [Libraries](#libraries)
+- [How to use the web app](#how-to-use-the-web-app)
+- [credits](#credits)
 
 
 ## About 
@@ -9,27 +15,42 @@ This web application takes a message from the user and then predict if it betwee
 
 Main project Files :
 
-- The app folder : 
+1. The app folder : 
+
                - templates folder :
                    - master.html : main page HTML code
                    - go.html : The page that the classification results appears on
                - run.py : the python file at which the Backend of the program operates
-- The data folder :
+
+2. The data folder :
+
                - categories.csv : the file that contains data about the categories
+
                - messages.csv : the file that contain data about the messages and thier genre
+
                - process_data.py : python file contains code for merging the above two files into a single dataframe and then cleans ,Then finally export it to a DB
+
                - disaster_messages.db : DB file that contains the table that was exported from process_data.py
-- The models folder :
+
+3. The models folder :
+
                - train_classifier.py : python file contains code for importing data from disaster_messages.db and build and train the model , Then evaluate it and exporting it to a pickle file
+
                - classifier.pkl : pickle file that contains the trained model
-- The Notebooks folder : Folder that contains explantory notebooks to build both the ETL pipeline and the ML pipeline . Also contains copies of csv files and db file
+               
+4. The Notebooks folder : Folder that contains explantory notebooks to build both the ETL pipeline and the ML pipeline . Also contains copies of csv files and db file
 
 ## How to run the web app 
+After downloading the above files :
+
 1. Run the following commands in the project's root directory to set up your database and model.
 
     - To run ETL pipeline that cleans data and stores in database
+
         `python data/process_data.py data/messages.csv data/categories.csv data/disaster_messages.db`
+
     - To run ML pipeline that trains classifier and saves
+
         `python models/train_classifier.py data/disaster_messages.db models/classifier.pkl`
 
 2. Go to `app` directory: `cd app`
@@ -49,13 +70,20 @@ Main project Files :
 - nltk
 
 To install those packges you can use pip or conda install
-example `pip install flask pandas` or `py -m pip install numpy`
+
+example : `pip install flask pandas` or `py -m pip install numpy`
 
 
-## The web app 
-the web app has two pages , That is the landing page :
+## How to use the web app 
+the web app has two pages . 
+
+That is the landing page :
 
 ![image](https://user-images.githubusercontent.com/91777656/192622916-5f7c2387-4780-4cac-a291-66a70486cbfd.png)
+
+you start by entering your message say like `we are 50 people and we need help`
+
+Then the model takes in the message and make specific classifications about the message
 
 And this the page wher the classification results appear :
 
@@ -63,4 +91,6 @@ And this the page wher the classification results appear :
 
 
 ## credits 
-this [article](https://www.sciencedirect.com/science/article/pii/S1877050919314152) helped me understand imbalanced data
+This [article](https://www.sciencedirect.com/science/article/pii/S1877050919314152) helped me understand imbalanced data
+
+Many thanks to [Udacity](https://www.udacity.com/) for providing the templates for the code 
